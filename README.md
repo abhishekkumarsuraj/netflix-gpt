@@ -3,7 +3,11 @@
 - Create React App
 - Configured tailwind 
 - Header
+- Routing
 - Login Form
+- sign up form (use formic for form validations)
+- Form Validation
+- useRef Hook
 
 # Features
 Not Logged in 
