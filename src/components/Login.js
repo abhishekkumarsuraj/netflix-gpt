@@ -16,10 +16,18 @@ const Login = () => {
 
   const handleButtonClick = () => {
     // Validate the form data
-    console.log(email.current.value);
-    console.log(password.current.value);
-    console.log(fullName.current.value);
-    const message = checkValidData(email.current.value, password.current.value,fullName.current.value);
+    let message = null;
+    try{
+      if(isSigninForm){
+        message = checkValidData(email.current.value, password.current.value);
+      }else{
+        message = checkValidData(email.current.value, password.current.value,fullName.current.value);
+      }
+     
+    }catch(error){
+      console.log(error);
+      message = "Please provide input details."
+    }
     setErrorMessage(message);
   };
 
